@@ -1,416 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-<meta name="description" content="AKFASHION - Premium luxury timepieces. Discover our exclusive collection of handcrafted watches." />
-<title>AKFASHION — Timeless Luxury Watches</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#3A4236">
+<meta name="description" content="MS STORE Pakistan - Premium luxury watches delivered across Pakistan">
+<title>MS STORE Pakistan — Premium Timepieces</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="images/favicon-msstore.jpg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div id="loader">
-  <div class="loader-logo">AKFASHION</div>
-  <div class="loader-bar"></div>
-</div>
-
-<header class="header" id="header">
-  <div class="header-inner">
-    <a href="#" class="logo" onclick="scrollToTop(event)">AKFASHION</a>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#catalog">Collection</a>
-      <a href="#about">Heritage</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <button class="icon-btn" onclick="toggleSearch()" aria-label="Search">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </button>
-      <button class="icon-btn" aria-label="Wishlist">
-        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-      </button>
-      <button class="icon-btn" onclick="toggleCart()" aria-label="Cart">
-        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
-      <button class="icon-btn menu-toggle" onclick="toggleMobileMenu()" aria-label="Menu">
-        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+  <a href="index.html" class="logo-nav">
+    <div class="logo-emblem"><img src="images/logo-msstore.jpg" alt="MS STORE"></div>
+    <div class="logo-text-group">
+      <span class="logo-text">MS STORE</span>
+      <span class="logo-subtext">Premium Timepieces</span>
     </div>
-  </div>
-</header>
-
-<div class="search-overlay" id="searchOverlay" onclick="closeSearchOverlay(event)">
-  <div class="search-container">
-    <div class="search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" class="search-input" id="searchInput" placeholder="Search for watches, collections, brands..." oninput="handleSearch(this.value)" />
-      <button class="search-close" onclick="toggleSearch()">✕</button>
-    </div>
-    <div class="search-suggestions">
-      <span onclick="quickSearch('Chronograph')">Chronograph</span>
-      <span onclick="quickSearch('Automatic')">Automatic</span>
-      <span onclick="quickSearch('Diving')">Diving</span>
-      <span onclick="quickSearch('Skeleton')">Skeleton</span>
-      <span onclick="quickSearch('GMT')">GMT</span>
-      <span onclick="quickSearch('Limited')">Limited Edition</span>
-    </div>
-  </div>
-</div>
-
-<div class="mobile-menu" id="mobileMenu">
-  <div class="mobile-menu-header">
-    <span class="logo">AKFASHION</span>
-    <button class="mobile-menu-close" onclick="toggleMobileMenu()">
-      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#categories" onclick="closeMenu()">Collection</a></li>
+    <li><a href="#products" onclick="closeMenu()">Shop</a></li>
+    <li><a href="product.html" onclick="closeMenu()">Featured</a></li>
+    <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="toggleCart()" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      <span class="cart-badge" id="cartCount">0</span>
     </button>
-  </div>
-  <nav class="mobile-nav">
-    <a href="#home" onclick="toggleMobileMenu()">Home</a>
-    <a href="#catalog" onclick="toggleMobileMenu()">Collection</a>
-    <a href="#about" onclick="toggleMobileMenu()">Heritage</a>
-    <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
-  </nav>
-  <div class="mobile-menu-footer">
-    <p style="color:var(--gray);font-size:0.85rem;">Follow Us</p>
-    <div class="mobile-menu-social">
-      <a class="social-link js-social-instagram" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="1.5"/></svg></a>
-      <a class="social-link js-social-facebook" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5.5 5.5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-      <a class="social-link js-social-tiktok" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
     </div>
   </div>
-</div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
 
+<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="pulse"></span> New Collection 2024
-      </div>
-      <h1>Where Time<br/>Meets <span class="gold">Elegance</span></h1>
-      <p>Discover AKFASHION's exclusive collection of meticulously crafted timepieces. Each watch is a testament to our unwavering commitment to luxury, precision, and timeless design.</p>
-      <div class="hero-cta">
-        <a href="#catalog" class="btn btn-primary">Explore Collection
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#about" class="btn btn-outline">Our Story</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">50+</div>
-          <div class="stat-label">Years of Craft</div>
-        </div>
-        <div>
-          <div class="stat-num">200K+</div>
-          <div class="stat-label">Happy Clients</div>
-        </div>
-        <div>
-          <div class="stat-num">100%</div>
-          <div class="stat-label">Authentic</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- WATCH HERO - with logo on the dial -->
-    <div class="hero-visual">
-      <div class="hero-ring r1"></div>
-      <div class="hero-ring r2"></div>
-
-      <div class="hero-watch">
-        <div class="watch-face">
-          <!-- 12 simple hour marks -->
-          <div id="hourMarksReplica"></div>
-
-          <!-- Watch face numerals 1-12 -->
-          <div id="hourNumbersReplica" style="position:absolute;inset:0;pointer-events:none;"></div>
-
-          <!-- LOGO on the watch dial (top center) -->
-          <div class="watch-logo" id="watchLogo">
-            <img src="images/favicon-1787523819941.jpg" alt="AKFASHION Logo" id="logoImage" onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:#D4AF37;font-family:var(--serif);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-align:center;line-height:1.2;\'>AK<br/>FASHION</span>';" />
-          </div>
-
-          <!-- AK.FASHION text on dial -->
-          <div class="watch-brand-text">AK.FASHION</div>
-
-          <!-- SHOP NOW text on dial -->
-          <div class="watch-shop-text">SHOP NOW</div>
-
-          <!-- Hands -->
-          <div class="hand hand-hour" id="handHour"></div>
-          <div class="hand hand-minute" id="handMinute"></div>
-          <div class="hand hand-second" id="handSecond"></div>
-          <div class="watch-center"></div>
-        </div>
-      </div>
-
-      <div class="hero-floating-card f1">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <div class="card-text">
-          <strong>Premium Quality</strong>
-          <span>Swiss Movement</span>
-        </div>
-      </div>
-      <div class="hero-floating-card f2">
-        <div class="card-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div class="card-text">
-          <strong>1 Year</strong>
-          <span>Warranty</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="brand-marquee">
-  <div class="marquee-track">
-    <span>Swiss Made</span>
-    <span>Automatic Movement</span>
-    <span>Sapphire Crystal</span>
-    <span>Hand Finished</span>
-    <span>Water Resistant 300M</span>
-    <span>Titanium Case</span>
-    <span>Swiss Made</span>
-    <span>Automatic Movement</span>
-    <span>Sapphire Crystal</span>
-    <span>Hand Finished</span>
-    <span>Water Resistant 300M</span>
-    <span>Titanium Case</span>
-  </div>
-</div>
-
-<section id="catalog" class="catalog-section">
-  <div class="section-inner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">The Collection</span>
-      <h2 class="section-title">Masterpiece <span class="gold">Timepieces</span></h2>
-      <p class="section-desc">Browse our complete collection of luxury watches, each crafted with unparalleled attention to detail.</p>
-    </div>
-
-    <div class="catalog-header reveal">
-      <div class="filter-tabs" id="filterTabs">
-        <button class="filter-tab active" data-filter="all">All Watches</button>
-        <button class="filter-tab" data-filter="Automatic">Automatic</button>
-        <button class="filter-tab" data-filter="Chronograph">Chronograph</button>
-        <button class="filter-tab" data-filter="Diving">Diving</button>
-        <button class="filter-tab" data-filter="Skeleton">Skeleton</button>
-        <button class="filter-tab" data-filter="Limited">Limited Edition</button>
-      </div>
-      <select class="sort-select" id="sortSelect" onchange="sortProducts(this.value)">
-        <option value="featured">Featured</option>
-        <option value="low-high">Price: Low to High</option>
-        <option value="high-low">Price: High to Low</option>
-        <option value="newest">Newest First</option>
-      </select>
-    </div>
-
-    <div class="products-grid" id="productsGrid"></div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="section-inner">
-    <div class="feature-split">
-      <div class="feature-image reveal">
-        <img id="aboutImage" src="https://images.unsplash.com/photo-1606220838315-056192d5e927?w=900&q=80" alt="Watchmaking Heritage" loading="lazy"/>
-        <div class="feature-stamp">
-          <div class="stamp-year" id="aboutStampYear">50+</div>
-          <div class="stamp-text"><strong id="aboutStampTitle">Years of Excellence</strong><span id="aboutStampSubtext">Master watchmakers</span></div>
-        </div>
-      </div>
-      <div class="feature-content reveal">
-        <span class="section-eyebrow" id="aboutEyebrow">Our Heritage</span>
-        <h2><span id="aboutTitlePrefix">The Art of</span> <span class="gold" id="aboutTitleHighlight">Swiss Watchmaking</span></h2>
-        <p id="aboutDescription">Since 2025, AKFASHION has been at the forefront of haute horlogerie. Our master craftsmen blend traditional techniques with cutting-edge innovation to create timepieces that transcend generations.</p>
-        <div class="feature-list-2" id="aboutFeaturesList">
-          <div class="feature-row">
-            <div class="feature-row-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <h4 class="about-feature-title">Swiss Precision Movement</h4>
-              <p class="about-feature-text">Each timepiece houses a meticulously assembled Swiss automatic movement, certified for exceptional accuracy.</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <div class="feature-row-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h4 class="about-feature-title">Lifetime Craftsmanship</h4>
-              <p class="about-feature-text">From sapphire crystal to 18k gold accents, only the finest materials grace our master creations.</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <div class="feature-row-icon">
-              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <div>
-              <h4 class="about-feature-title">Certified Authenticity</h4>
-              <p class="about-feature-text">Every AKFASHION timepiece comes with a certificate of authenticity and a 5-year international warranty.</p>
-            </div>
-          </div>
-        </div>
-        <a href="#catalog" class="btn btn-primary"><span id="aboutButtonText">Discover Heritage</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Pakistan's Premier Watch Destination</div>
+      <h1 class="hero-title">
+        Time is <span class="accent">Luxury</span><br>
+        Wear it with <span class="accent">Pride</span>
+      </h1>
+      <p class="hero-desc">
+        Discover the art of fine timekeeping with MS STORE. Premium watches that blend royal elegance, precision craftsmanship, and timeless design — delivered across Pakistan.
+      </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Explore →</a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="btn btn-whatsapp js-whatsapp-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.20 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
         </a>
       </div>
     </div>
+
+    <!-- TWO PENDULUM WATCHES STACK -->
+    <div class="pendulum-stage">
+      <div class="pendulum-bg-ring"></div>
+      <div class="pendulum-frames">
+        <div class="pendulum-frame pendulum-frame-1">
+          <div class="pendulum-top"></div>
+          <div class="pendulum-string"></div>
+          <div class="watch-clock">
+            <div class="watch-dial">
+              <div class="dial-marker major" style="transform: rotate(0deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(90deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(180deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(270deg)"></div>
+              <div class="dial-marker" style="transform: rotate(30deg)"></div>
+              <div class="dial-marker" style="transform: rotate(60deg)"></div>
+              <div class="dial-marker" style="transform: rotate(120deg)"></div>
+              <div class="dial-marker" style="transform: rotate(150deg)"></div>
+              <div class="dial-marker" style="transform: rotate(210deg)"></div>
+              <div class="dial-marker" style="transform: rotate(240deg)"></div>
+              <div class="dial-marker" style="transform: rotate(300deg)"></div>
+              <div class="dial-marker" style="transform: rotate(330deg)"></div>
+              <div class="dial-numeral" style="transform: rotate(0deg) translateY(-64px) rotate(0deg)">12</div>
+              <div class="dial-numeral" style="transform: rotate(90deg) translateY(-64px) rotate(-90deg)">3</div>
+              <div class="dial-numeral" style="transform: rotate(180deg) translateY(-64px) rotate(-180deg)">6</div>
+              <div class="dial-numeral" style="transform: rotate(270deg) translateY(-64px) rotate(-270deg)">9</div>
+            </div>
+            <div class="watch-hands">
+              <div class="hand-hour" id="handHour"></div>
+              <div class="hand-minute" id="handMinute"></div>
+              <div class="hand-second" id="handSecond"></div>
+            </div>
+            <div class="watch-brand">
+              <div class="watch-brand-name">MSSTORE</div>
+              <div class="watch-brand-sub">Pakistan</div>
+            </div>
+            <div class="watch-center-pin"></div>
+            <div class="watch-crown"></div>
+          </div>
+          <div class="pendulum-weight"></div>
+          <div class="digital-time" id="digitalTime">00:00:00</div>
+        </div>
+        <!-- Second stacked watch -->
+        <div class="pendulum-frame pendulum-frame-2">
+          <div class="pendulum-top"></div>
+          <div class="pendulum-string"></div>
+          <div class="watch-clock">
+            <div class="watch-dial">
+              <div class="dial-marker major" style="transform: rotate(0deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(90deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(180deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(270deg)"></div>
+            </div>
+            <div class="watch-center-pin"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="video-section">
-  <div class="video-inner" id="videoInner">
-    <div class="section-head reveal">
-      <span class="section-eyebrow">The Making</span>
-      <h2 class="section-title">A Glimpse Into Our <span class="gold" style="background:var(--gradient-gold);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;font-style:italic;">Craftsmanship</span></h2>
-      <p class="section-desc">Watch how each AKFASHION timepiece comes to life through the hands of our master artisans.</p>
-    </div>
-    <div id="videoFrames">
-      <div class="video-frame reveal in">
-        <div class="video-decoration"></div>
-        <video controls poster="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=1200&q=80" preload="metadata">
-          <source src="https://cdn.pixabay.com/video/2022/12/20/143203-781544927_large.mp4" type="video/mp4">
-          <source src="https://cdn.pixabay.com/video/2024/03/20/205149-924541544_large.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <div class="section-eyebrow">★ Curated Collections ★</div>
+    <h2 class="section-title">Browse By <span class="italic">Style</span></h2>
+    <p class="section-desc">From royal luxury to everyday elegance, find the perfect timepiece</p>
   </div>
+  <div class="category-bar" id="categoryBar"></div>
 </section>
 
-<section class="newsletter">
-  <div class="newsletter-inner">
-    <h2>Join the <span class="gold">Inner Circle</span></h2>
-    <p>Be the first to discover new collections, exclusive releases, and private events.</p>
-    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-      <input type="email" class="newsletter-input" placeholder="Enter your email address" required />
-      <button type="submit" class="newsletter-btn">Subscribe</button>
-    </form>
-  </div>
+<!-- PRODUCTS -->
+<section class="section" id="products" style="padding-top:0">
+  <div class="product-grid" id="productGrid"></div>
 </section>
 
-<footer class="footer" id="contact">
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <span class="footer-logo">AKFASHION</span>
-        <p class="footer-about">Crafting timeless luxury timepieces since 2025. Every AKFASHION watch is a masterwork of precision, heritage, and uncompromising elegance.</p>
-        <div class="social-links">
-          <a class="social-link js-social-instagram" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="white" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="white" stroke-width="1.5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="1.5"/></svg></a>
-          <a class="social-link js-social-facebook" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5.5 5.5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a class="social-link js-social-tiktok" href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a>
-          <a class="social-link js-social-youtube" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="black"/></svg></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="#catalog">All Watches</a></li>
-          <li><a href="#catalog">New Arrivals</a></li>
-          <li><a href="#catalog">Best Sellers</a></li>
-          <li><a href="#catalog">Limited Edition</a></li>
-          <li><a href="#catalog">Gift Cards</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">Our Story</a></li>
-          <li><a href="#about">Heritage</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Press</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="contact.html">Shipping</a></li>
-          <li><a href="contact.html">Returns</a></li>
-          <li><a href="contact.html">Warranty</a></li>
-          <li><a href="contact.html">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Get In Touch</h4>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>LAHORE</span>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+92 303 7252700</span>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span class="js-contact-email">unique.x.fashion000@gmail.com</span>
-        </div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>MS STORE</h3>
+      <p>Pakistan's premier destination for luxury timepieces. Premium watches delivered to your doorstep.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon js-facebook-link" id="footerFacebook" target="_blank" rel="noopener" style="display:none">f</a>
+        <a href="#" class="social-icon js-instagram-link" id="footerInstagram" target="_blank" rel="noopener" style="display:none">ig</a>
+        <a href="#" class="social-icon js-tiktok-link" id="footerTiktok" target="_blank" rel="noopener" style="display:none">tt</a>
+        <a href="#" class="social-icon js-youtube-link" id="footerYoutube" target="_blank" rel="noopener" style="display:none">yt</a>
+        <a href="https://wa.me/923001234567" target="_blank" class="social-icon js-whatsapp-link">W</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2024 AKFASHION. All Rights Reserved. Crafted with passion in Switzerland.</p>
-      <div class="payment-methods">
-        <span class="payment-icon">VISA</span>
-        <span class="payment-icon">MC</span>
-        <span class="payment-icon">AMEX</span>
-        <span class="payment-icon">PAYPAL</span>
-        <span class="payment-icon">APPLE</span>
-      </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#products">All Watches</a></li>
+        <li><a href="#categories">New Arrivals</a></li>
+        <li><a href="#products">Best Sellers</a></li>
+        <li><a href="#products">Limited Edition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Shipping</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">Warranty</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="contact.html">About</a></li>
+        <li><a href="contact.html">Careers</a></li>
+        <li><a href="contact.html">Privacy</a></li>
+        <li><a href="contact.html">Terms</a></li>
+      </ul>
     </div>
   </div>
+  <div class="footer-bottom">© 2025 MS STORE Pakistan. All Rights Reserved.</div>
 </footer>
 
-<div class="modal" id="productModal">
-  <div class="modal-overlay" onclick="closeModal()"></div>
-  <div class="modal-content" id="modalContent">
-    <div class="modal-bg-overlay"></div>
-    <button class="modal-close" onclick="closeModal()">
-      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="modal-image-section">
-      <div class="modal-main-image">
-        <img id="modalImage" src="" alt="" />
-      </div>
-      <div class="modal-thumbnails" id="modalThumbnails"></div>
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-handle"></div>
+  <div class="cart-header">
+    <div class="cart-title">🛒 Your Cart</div>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">Rs. 0</span>
     </div>
-    <div class="modal-info-section" id="modalInfo"></div>
+    <div class="cart-actions">
+      <button class="btn btn-primary" onclick="openCheckout()">Buy Now - Checkout</button>
+      <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="btn btn-whatsapp js-whatsapp-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.20 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Checkout
+      </a>
+    </div>
   </div>
 </div>
 
-<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
-<aside class="cart-drawer" id="cartDrawer">
-  <div class="cart-header">
-    <div class="cart-title">Shopping Cart <span class="count" id="cartDrawerCount">0</span></div>
-    <button class="cart-close" onclick="toggleCart()">
-      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
+<!-- CHECKOUT -->
+<div class="checkout-overlay" id="checkoutModal">
+  <div class="checkout-form">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <div class="form-header">
+      <h2 class="form-title">Complete Your Order</h2>
+      <p class="form-subtitle">Fill in your details and we'll deliver to your doorstep</p>
+    </div>
+    <div class="order-summary" id="orderSummary"></div>
+    <form id="checkoutForm" onsubmit="submitOrder(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" name="name" class="form-input" required placeholder="Muhammad Ahmed">
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp *</label>
+          <input type="tel" name="whatsapp" class="form-input" required placeholder="03XX-XXXXXXX">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">City *</label>
+          <input type="text" name="city" class="form-input" required placeholder="Lahore">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Postal *</label>
+          <input type="text" name="postal" class="form-input" required placeholder="54000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Address *</label>
+        <textarea name="address" class="form-textarea" required placeholder="House #, Street, Area..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Notes (Optional)</label>
+        <textarea name="notes" class="form-textarea" placeholder="Special instructions..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px">
+        Place Order — Cash on Delivery
+      </button>
+    </form>
   </div>
-  <div class="cart-body" id="cartBody"></div>
-  <div class="cart-footer" id="cartFooter"></div>
-</aside>
+</div>
 
+<!-- TOAST -->
 <div class="toast" id="toast">
-  <div class="toast-icon">
-    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-  </div>
-  <div class="toast-text">
-    <strong id="toastTitle">Added to Cart</strong>
-    <span id="toastMessage">Item has been added successfully</span>
-  </div>
+  <div class="toast-icon">✓</div>
+  <span id="toastMessage">Item added to cart!</span>
 </div>
 
 <script src="js/products.js"></script>
 <script src="js/config.js"></script>
 <script src="js/settings.js"></script>
-<script src="js/script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
