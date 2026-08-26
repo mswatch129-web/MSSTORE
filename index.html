@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="theme-color" content="#3A4236">
+<meta name="description" content="MS STORE Pakistan - Premium luxury watches delivered across Pakistan">
+<title>MS STORE Pakistan — Premium Timepieces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="shortcut icon" href="images/favicon-msstore.jpg">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+  <a href="index.html" class="logo-nav">
+    <div class="logo-emblem"><img src="images/logo-msstore.jpg" alt="MS STORE"></div>
+    <div class="logo-text-group">
+      <span class="logo-text">MS STORE</span>
+      <span class="logo-subtext">Premium Timepieces</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+    <li><a href="#categories" onclick="closeMenu()">Collection</a></li>
+    <li><a href="#products" onclick="closeMenu()">Shop</a></li>
+    <li><a href="index.html?filter=featured#products" onclick="closeMenu()">Featured</a></li>
+    <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="toggleCart()" aria-label="Cart">
+      <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+      <span class="cart-badge" id="cartCount">0</span>
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Pakistan's Premier Watch Destination</div>
+      <h1 class="hero-title">
+        Time is <span class="accent">Luxury</span><br>
+        Wear it with <span class="accent">Pride</span>
+      </h1>
+      <p class="hero-desc">
+        Discover the art of fine timekeeping with MS STORE. Premium watches that blend royal elegance, precision craftsmanship, and timeless design — delivered across Pakistan.
+      </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Explore →</a>
+        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="btn btn-whatsapp js-whatsapp-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.20 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- TWO PENDULUM WATCHES STACK -->
+    <div class="pendulum-stage">
+      <div class="pendulum-bg-ring"></div>
+      <div class="pendulum-frames">
+        <div class="pendulum-frame pendulum-frame-1">
+          <div class="pendulum-top"></div>
+          <div class="pendulum-string"></div>
+          <div class="watch-clock">
+            <div class="watch-dial">
+              <div class="dial-marker major" style="transform: rotate(0deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(90deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(180deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(270deg)"></div>
+              <div class="dial-marker" style="transform: rotate(30deg)"></div>
+              <div class="dial-marker" style="transform: rotate(60deg)"></div>
+              <div class="dial-marker" style="transform: rotate(120deg)"></div>
+              <div class="dial-marker" style="transform: rotate(150deg)"></div>
+              <div class="dial-marker" style="transform: rotate(210deg)"></div>
+              <div class="dial-marker" style="transform: rotate(240deg)"></div>
+              <div class="dial-marker" style="transform: rotate(300deg)"></div>
+              <div class="dial-marker" style="transform: rotate(330deg)"></div>
+              <div class="dial-numeral" style="transform: rotate(0deg) translateY(-64px) rotate(0deg)">12</div>
+              <div class="dial-numeral" style="transform: rotate(90deg) translateY(-64px) rotate(-90deg)">3</div>
+              <div class="dial-numeral" style="transform: rotate(180deg) translateY(-64px) rotate(-180deg)">6</div>
+              <div class="dial-numeral" style="transform: rotate(270deg) translateY(-64px) rotate(-270deg)">9</div>
+            </div>
+            <div class="watch-hands">
+              <div class="hand-hour" id="handHour"></div>
+              <div class="hand-minute" id="handMinute"></div>
+              <div class="hand-second" id="handSecond"></div>
+            </div>
+            <div class="watch-brand">
+              <div class="watch-brand-name">MSSTORE</div>
+              <div class="watch-brand-sub">Pakistan</div>
+            </div>
+            <div class="watch-center-pin"></div>
+            <div class="watch-crown"></div>
+          </div>
+          <div class="pendulum-weight"></div>
+          <div class="digital-time" id="digitalTime">00:00:00</div>
+        </div>
+        <!-- Second stacked watch -->
+        <div class="pendulum-frame pendulum-frame-2">
+          <div class="pendulum-top"></div>
+          <div class="pendulum-string"></div>
+          <div class="watch-clock">
+            <div class="watch-dial">
+              <div class="dial-marker major" style="transform: rotate(0deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(90deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(180deg)"></div>
+              <div class="dial-marker major" style="transform: rotate(270deg)"></div>
+            </div>
+            <div class="watch-center-pin"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="section-header">
+    <div class="section-eyebrow">★ Curated Collections ★</div>
+    <h2 class="section-title">Browse By <span class="italic">Style</span></h2>
+    <p class="section-desc">From royal luxury to everyday elegance, find the perfect timepiece</p>
+  </div>
+  <div class="category-bar" id="categoryBar"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products" style="padding-top:0">
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- SHOWCASE VIDEO (after catalog) -->
+<section class="section showcase-section hidden" id="showcase">
+  <div class="showcase-wrap" id="showcaseWrap"></div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>MS STORE</h3>
+      <p>Pakistan's premier destination for luxury timepieces. Premium watches delivered to your doorstep.</p>
+      <div class="social-row">
+        <a href="#" class="social-icon js-facebook-link" id="footerFacebook" target="_blank" rel="noopener" style="display:none">f</a>
+        <a href="#" class="social-icon js-instagram-link" id="footerInstagram" target="_blank" rel="noopener" style="display:none">ig</a>
+        <a href="#" class="social-icon js-tiktok-link" id="footerTiktok" target="_blank" rel="noopener" style="display:none">tt</a>
+        <a href="#" class="social-icon js-youtube-link" id="footerYoutube" target="_blank" rel="noopener" style="display:none">yt</a>
+        <a href="https://wa.me/923001234567" target="_blank" class="social-icon js-whatsapp-link">W</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="#products">All Watches</a></li>
+        <li><a href="#categories">New Arrivals</a></li>
+        <li><a href="#products">Best Sellers</a></li>
+        <li><a href="#products">Limited Edition</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Shipping</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">Warranty</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="contact.html">About</a></li>
+        <li><a href="contact.html">Careers</a></li>
+        <li><a href="contact.html">Privacy</a></li>
+        <li><a href="contact.html">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 MS STORE Pakistan. All Rights Reserved.</div>
+</footer>
+
+<!-- CART -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-handle"></div>
+  <div class="cart-header">
+    <div class="cart-title">🛒 Your Cart</div>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-amount" id="cartTotal">Rs. 0</span>
+    </div>
+    <div class="cart-actions">
+      <button class="btn btn-primary" onclick="openCheckout()">Buy Now - Checkout</button>
+      <a href="https://wa.me/923001234567" target="_blank" rel="noopener" class="btn btn-whatsapp js-whatsapp-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.20 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Checkout
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- CHECKOUT -->
+<div class="checkout-overlay" id="checkoutModal">
+  <div class="checkout-form">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <div class="form-header">
+      <h2 class="form-title">Complete Your Order</h2>
+      <p class="form-subtitle">Fill in your details and we'll deliver to your doorstep</p>
+    </div>
+    <div class="order-summary" id="orderSummary"></div>
+    <form id="checkoutForm" onsubmit="submitOrder(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" name="name" class="form-input" required placeholder="Muhammad Ahmed">
+        </div>
+        <div class="form-group">
+          <label class="form-label">WhatsApp *</label>
+          <input type="tel" name="whatsapp" class="form-input" required placeholder="03XX-XXXXXXX">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">City *</label>
+          <input type="text" name="city" class="form-input" required placeholder="Lahore">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Postal *</label>
+          <input type="text" name="postal" class="form-input" required placeholder="54000">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Address *</label>
+        <textarea name="address" class="form-textarea" required placeholder="House #, Street, Area..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Notes (Optional)</label>
+        <textarea name="notes" class="form-textarea" placeholder="Special instructions..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px">
+        Place Order — Cash on Delivery
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <div class="toast-icon">✓</div>
+  <span id="toastMessage">Item added to cart!</span>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/config.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "siteName": "MS STORE",
+  "siteTagline": "Timeless Elegance, Refined Precision",
+  "whatsappNumber": "9203025623991",
+  "whatsappMessage": "Hello MS STORE, I have a question about your watches",
+  "contactEmail": "mswatch129@gmail.com",
+  "phone": "+92 302 5623991",
+  "phoneHours": "Always",
+  "address": "Lahore, Pakistan",
+  "instagramUrl": "https://www.instagram.com/ms_store11111/",
+  "tiktokUrl": "https://www.tiktok.com/@ms.watch2",
+  "facebookUrl": "",
+  "youtubeUrl": "",
+  "standardShipping": "250",
+  "freeShippingThreshold": "6500",
+  "about": {
+    "eyebrow": "Our Heritage",
+    "titlePrefix": "The Art of",
+    "titleHighlight": "Timeless Craftsmanship",
+    "description": "MS STORE brings together precision engineering and refined design. Every timepiece in our collection reflects a commitment to quality, elegance, and enduring style — crafted for those who value time well spent.",
+    "image": "images/about-1787736362814.jpg",
+    "stampYear": "10+",
+    "stampTitle": "Years of Trust",
+    "stampSubtext": "Curated craftsmanship",
+    "buttonText": "Discover Heritage",
+    "features": [
+      {
+        "title": "Precision Movement",
+        "text": "Each timepiece is fitted with a reliable, precisely calibrated movement built for lasting accuracy."
+      },
+      {
+        "title": "Premium Materials",
+        "text": "From polished stainless steel to fine detailing, only quality materials make it into our collection."
+      },
+      {
+        "title": "Certified Authenticity",
+        "text": "Every MS STORE watch is quality-checked and backed by our warranty and customer support."
+      }
+    ]
+  }
+}
